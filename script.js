@@ -25,3 +25,5 @@ button.addEventListener('click', () => {
         renderItems();                      // update display
     }
 });
+
+renderItems();
