@@ -11,6 +11,21 @@ function renderItems() {
     items.forEach((item, index) => {
         const li = document.createElement('li');
         li.textContent = item;
+
+        // Create delete button
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'Delete';
+        deleteBtn.style.marginLeft = '10px';
+
+        // Delete event
+        deleteBtn.addEventListener('click', () => {
+            items.splice(index, 1);              // Remove the item from the array
+            localStorage.setItem('items', JSON.stringify(items)); // Update localStorage
+            renderItems();                       // Re-render the list
+        });
+
+        li.appendChild(deleteBtn); 
+
         savedList.appendChild(li);
     });
 }
