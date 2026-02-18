@@ -6,24 +6,24 @@ const savedList = document.getElementById('savedList');
 let items = JSON.parse(localStorage.getItem('items')) || [];
 
 function renderItems() {
-    savedList.innerHTML = '';
+    savedList.innerHTML = ''; // clear the list
+
     items.forEach((item, index) => {
-        const li = document.createElement('li');
+        // Create a button for each task
+        const taskBtn = document.createElement('button');
+        taskBtn.textContent = item;  // the text of the task
+        taskBtn.style.display = 'block'; // so each button is on its own line
+        taskBtn.style.margin = '5px auto'; // center horizontally
+        taskBtn.style.width = '200px'; // optional width
 
-        const span = document.createElement('span');
-        span.textContent = item.text || item;
-        li.appendChild(span);
-
-        const deleteBtn = document.createElement('button');
-        deleteBtn.textContent = span.textContent;
-        deleteBtn.addEventListener('click', () => {
-            items.splice(index, 1);
-            localStorage.setItem('items', JSON.stringify(items));
-            renderItems();
+        // Add click event (here it deletes itself)
+        taskBtn.addEventListener('click', () => {
+            items.splice(index, 1); // remove task from array
+            localStorage.setItem('items', JSON.stringify(items)); // save
+            renderItems(); // re-render list
         });
-        //li.appendChild(deleteBtn);
 
-        savedList.appendChild(deleteBtn);
+        savedList.appendChild(taskBtn); // add button to list
     });
 }
 
