@@ -15,7 +15,7 @@ function renderItems() {
         li.appendChild(span);
 
         const deleteBtn = document.createElement('button');
-        deleteBtn.textContent = 'X';
+        deleteBtn.textContent = 'remove task';
         deleteBtn.addEventListener('click', () => {
             items.splice(index, 1);
             localStorage.setItem('items', JSON.stringify(items));
@@ -27,15 +27,24 @@ function renderItems() {
     });
 }
 
-
-// Save new item
-button.addEventListener('click', () => {
+function addTask() {
     const text = input.value.trim();
     if (text !== '') {
-        items.push(text);                  
-        localStorage.setItem('items', JSON.stringify(items)); 
-        input.value = '';                   
-        renderItems();                
+        items.push(text);
+        localStorage.setItem('items', JSON.stringify(items));
+        input.value = '';
+        renderItems();
+    }
+}
+
+// Save new item
+button.addEventListener('click', addTask);
+
+input.addEventListener('keydown', (event) =>
+{
+    if (event.key === 'Enter')
+    {
+        addTask();
     }
 });
 
