@@ -5,30 +5,29 @@ const savedList = document.getElementById('savedList');
 // Load saved items from localStorage
 let items = JSON.parse(localStorage.getItem('items')) || [];
 
-// Render items
+// Function to render items
 function renderItems() {
-    savedList.innerHTML = '';
+    savedList.innerHTML = ''; // clear the list
     items.forEach((item, index) => {
         const li = document.createElement('li');
-        li.textContent = item;
 
-        // Create delete button
+        const span = document.createElement('span');
+        span.textContent = item.text || item; // works for both strings or objects
+        li.appendChild(span);
+
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'Delete';
-        deleteBtn.style.marginLeft = '10px';
-
-        // Delete event
         deleteBtn.addEventListener('click', () => {
-            items.splice(index, 1);              // Remove the item from the array
-            localStorage.setItem('items', JSON.stringify(items)); // Update localStorage
-            renderItems();                       // Re-render the list
+            items.splice(index, 1);
+            localStorage.setItem('items', JSON.stringify(items));
+            renderItems();
         });
-
-        li.appendChild(deleteBtn); 
+        li.appendChild(deleteBtn);
 
         savedList.appendChild(li);
     });
 }
+
 
 // Save new item
 button.addEventListener('click', () => {
