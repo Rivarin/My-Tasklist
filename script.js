@@ -15,7 +15,7 @@ function renderItems() {
         li.appendChild(span);
 
         const deleteBtn = document.createElement('button');
-        deleteBtn.textContent = 'remove task';
+        deleteBtn.textContent = 'X';
         deleteBtn.addEventListener('click', () => {
             items.splice(index, 1);
             localStorage.setItem('items', JSON.stringify(items));
