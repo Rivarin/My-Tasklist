@@ -14,7 +14,7 @@ function renderItems() {
         taskBtn.textContent = item;  // the text of the task
         taskBtn.style.display = 'block'; // so each button is on its own line
         taskBtn.style.margin = '5px auto'; // center horizontally
-        taskBtn.style.width = '200px auto'; // optional width
+        taskBtn.style.width = '200px'; // optional width
 
         // Add click event (here it deletes itself)
         taskBtn.addEventListener('click', () => {
