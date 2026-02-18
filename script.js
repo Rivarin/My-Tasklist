@@ -11,7 +11,7 @@ function renderItems() {
     items.forEach((item, index) => {
         // Create a button for each task
         const taskBtn = document.createElement('button');
-        taskBtn.textContent = item.textContent||item.text;  // the text of the task
+        taskBtn.textContent = item;  // the text of the task
         taskBtn.style.display = 'block'; // so each button is on its own line
         taskBtn.style.margin = '5px auto'; // center horizontally
         taskBtn.style.width = '200px'; // optional width
