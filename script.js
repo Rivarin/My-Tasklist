@@ -1,5 +1,5 @@
 const input = document.getElementById('myInput');
-const button = document.getElementById('submitBtn');
+//const button = document.getElementById('submitBtn');
 const savedList = document.getElementById('savedList');
 
 
@@ -38,7 +38,7 @@ function addTask() {
 }
 
 // Save new item
-button.addEventListener('click', addTask);
+//button.addEventListener('click', addTask);
 
 input.addEventListener('keydown', (event) =>
 {
