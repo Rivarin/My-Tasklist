@@ -15,15 +15,15 @@ function renderItems() {
         li.appendChild(span);
 
         const deleteBtn = document.createElement('button');
-        deleteBtn.textContent = li;
+        deleteBtn.textContent = span.textContent;
         deleteBtn.addEventListener('click', () => {
             items.splice(index, 1);
             localStorage.setItem('items', JSON.stringify(items));
             renderItems();
         });
-        li.appendChild(deleteBtn);
+        //li.appendChild(deleteBtn);
 
-        savedList.appendChild(li);
+        savedList.appendChild(deleteBtn);
     });
 }
 
