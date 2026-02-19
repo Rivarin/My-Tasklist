@@ -48,7 +48,7 @@ body {
 }
     .task-row.removing {
         opacity: 0;
-        transform: translateX(-10px);
+        /*transform: translateX(-10px);*/
         height: 0;
         margin: 0;
         padding-top: 0;
