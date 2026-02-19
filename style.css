@@ -41,7 +41,7 @@ body {
     justify-content: flex-start;
     padding: 10px 12px;
     margin: 6px 0;
-    background-color: #ffffff;
+    background-color: #ef9385;
     border-radius: 6px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     transition: 0.15s ease;
@@ -90,7 +90,7 @@ body {
     padding: 12px 14px;
     border: none;
     border-radius: 6px;
-    background-color: #ffffff;
+    background-color: #ef9385;
     font-size: 15px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     outline: none;
