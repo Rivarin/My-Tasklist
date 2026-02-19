@@ -2,7 +2,7 @@ body {
     margin: 0;
     background-color: #ef9385;
     color: #87382d; /* so text is visible */
-    font-family: Arial, sans-serif;
+    font-family: Nunito, sans-serif;
 }
 
 /* Main layout container */
@@ -16,7 +16,7 @@ body {
     width: 250px; /* fixed width */
     background-color: #87382d;
     color: #ef9385; /* so text is visible */
-    font-family: Arial, sans-serif;
+    font-family: Nunito, sans-serif;
 }
 
 /* Main content area */
