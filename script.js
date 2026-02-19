@@ -1,6 +1,6 @@
-const input = document.getElementById('myInput');
+const input = document.getElementById('taskInput');
 //const button = document.getElementById('submitBtn');
-const savedList = document.getElementById('savedList');
+const savedList = document.getElementById('savedTaskList');
 
 
 let items = JSON.parse(localStorage.getItem('items')) || [];
@@ -10,32 +10,32 @@ function renderItems() {
 
     items.forEach((item, index) => {
         // Create a button for each task
-        const taskBtn = document.createElement('button');
-        taskBtn.textContent = item;  // the text of the task
-        taskBtn.style.display = 'block'; // so each button is on its own line
-        taskBtn.style.margin = '5px'; // center horizontally
-        taskBtn.style.width = '200px'; // optional width
+        const taskField = document.createElement('input');
+        taskField.textContent = item;  // the text of the task
+        taskField.style.display = 'block'; // so each button is on its own line
+        taskField.style.margin = '5px'; // center horizontally
+        taskField.style.width = '200px'; // optional width
 
         // Add click event (here it deletes itself)
-        taskBtn.addEventListener('click', () => {
+        taskField.addEventListener('click', () => {
             items.splice(index, 1); // remove task from array
             localStorage.setItem('items', JSON.stringify(items)); // save
             renderItems(); // re-render list
         });
 
-        savedList.appendChild(taskBtn); // add button to list
+        savedList.appendChild(taskField); // add button to list
     });
 }
 
-function addTask() {
-    const text = input.value.trim();
-    if (text !== '') {
-        items.push(text);
-        localStorage.setItem('items', JSON.stringify(items));
-        input.value = '';
-        renderItems();
-    }
-}
+//function addTask() {
+//   const text = input.value.trim();
+//   if (text !== '') {
+//        items.push(text);
+//        localStorage.setItem('items', JSON.stringify(items));
+//        input.value = '';
+//        renderItems();
+//    }
+//}
 
 // Save new item
 //button.addEventListener('click', addTask);
@@ -44,7 +44,13 @@ input.addEventListener('keydown', (event) =>
 {
     if (event.key === 'Enter')
     {
-        addTask();
+        const text = input.value.trim();
+        if (text !== '') {
+            items.push(text);
+            localStorage.setItem('items', JSON.stringify(items));
+            input.value = '';
+            renderItems();
+        }
     }
 });
 
