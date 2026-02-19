@@ -1,5 +1,23 @@
 body {
+    margin: 0;
     background-color: #ef9385;
     color: white; /* so text is visible */
     font-family: Arial, sans-serif;
 }
+
+/* Main layout container */
+.layout {
+    display: flex; /* puts children side-by-side */
+    height: 100vh; /* full screen height */
+}
+
+/* Left sidebar */
+.sidebar {
+    width: 250px; /* fixed width */
+    background-color: #333; /* dark color */
+}
+
+/* Main content area */
+.main {
+    flex: 1; /* takes remaining space */
+    padding: 20px;

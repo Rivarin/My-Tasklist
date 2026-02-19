@@ -6,15 +6,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 style="text-align: left;">Tasklist (this website is a WIP)</h1>
-    <hr>
+    <div class="layout">
+        <div class="sidebar">
+            <!-- Empty for now -->
+        </div>
 
-    <p style="text-align: left;">Enter thy task</p>
-
-    <input style="display: block; margin: 20px auto;" type="text" id="myInput" placeholder="Type task...">
-    <!--<button id="submitBtn">Add</button>-->
-
-    <ul style="text-align: left; list-style: none;" id="savedList"></ul>
+        <div class="main">
+            <h1>Tasklist</h1>
+            <input type="text" id="myInput" placeholder="Type task...">
+            <ul id="savedList"></ul>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
