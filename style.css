@@ -145,12 +145,12 @@ body
     height: 100vh; 
 }
 
-.sidebar-link 
-{
+.sidebar-link {
     color: #ef9385;
     text-decoration: none;
     font-weight: 600;
     transition: 0.2s ease;
+    align-items: center;
 }
 
     .sidebar-link:hover 
