@@ -13,8 +13,8 @@ function renderItems() {
         // Create container for each task
         const row = document.createElement('div');
         row.style.display = 'flex';
-        row.style.alignItems = 'center';
-        row.style.justifyContent = 'center';
+        row.style.alignItems = 'left';
+        row.style.justifyContent = 'left';
         row.style.margin = '5px 0';
 
         // Delete button (on the left)
@@ -33,7 +33,7 @@ function renderItems() {
         taskInput.type = 'text';
         taskInput.value = item;
         taskInput.style.width = '200px';
-        taskInput.style.textAlign = 'center';
+        taskInput.style.textAlign = 'left';
 
         // When user edits the text
         taskInput.addEventListener('change', () => {
