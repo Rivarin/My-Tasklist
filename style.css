@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background-color: #ef9385;
-    color: white; /* so text is visible */
+    color: #d16656; /* so text is visible */
     font-family: Arial, sans-serif;
 }
 
@@ -14,10 +14,11 @@ body {
 /* Left sidebar */
 .sidebar {
     width: 250px; /* fixed width */
-    background-color: #333; /* dark color */
+    background-color: #d16656; 
 }
 
 /* Main content area */
 .main {
     flex: 1; /* takes remaining space */
     padding: 20px;
+}
