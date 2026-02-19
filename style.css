@@ -145,7 +145,8 @@ body
     height: 100vh; 
 }
 
-.sidebar-link {
+.sidebar-link 
+{
     display: flex; 
     justify-content: center; 
     align-items: center; 
@@ -158,4 +159,17 @@ body
     {
         color: #ffccaa;
         text-decoration: underline;
+    }
+
+.sidebar-icon 
+{
+    width: 30px; 
+    display: block;
+    margin: 0 auto; 
+    transition: 0.2s ease;
+}
+
+    .sidebar-icon:hover 
+    {
+        transform: scale(1.1);
     }
