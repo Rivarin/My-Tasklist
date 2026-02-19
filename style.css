@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background-color: #ef9385;
-    color: #592018; /* so text is visible */
+    color: #87382d; /* so text is visible */
     font-family: Arial, sans-serif;
 }
 
@@ -14,7 +14,7 @@ body {
 /* Left sidebar */
 .sidebar {
     width: 250px; /* fixed width */
-    background-color: #592018;
+    background-color: #87382d;
     color: #ef9385; /* so text is visible */
     font-family: Arial, sans-serif;
 }
@@ -58,7 +58,7 @@ body {
 /* Subtle focus effect */
     .task-input:focus {
         background-color: #ffffff;
-        box-shadow: 0 0 0 2px #592018;
+        box-shadow: 0 0 0 2px #87382d;
     }
 
 /* Delete button */
@@ -67,7 +67,7 @@ body {
     padding: 6px 10px;
     border: none;
     border-radius: 0px;
-    background-color: #592018;
+    background-color: #87382d;
     color: white;
     cursor: pointer;
     transition: 0.2s ease;
@@ -75,7 +75,7 @@ body {
 
     /* Hover effect */
     .delete-btn:hover {
-        background-color: #e04848;
+        background-color: #87382d;
         transform: scale(1.05);
     }
 
