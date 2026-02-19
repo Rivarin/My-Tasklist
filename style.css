@@ -1,4 +1,5 @@
-body {
+body 
+{
     margin: 0;
     background-color: #ef9385;
     color: #87382d;
@@ -6,13 +7,15 @@ body {
 }
 
 /* Main layout container */
-.layout {
+.layout 
+{
     display: flex;
     height: 100vh; 
 }
 
 /* Left sidebar */
-.sidebar {
+.sidebar 
+{
     width: 250px;
     background-color: #87382d;
     color: #ef9385;
@@ -20,7 +23,8 @@ body {
 }
 
 /* Main content area */
-.main {
+.main 
+{
     flex: 1; /* takes remaining space */
     padding: 20px;
 }
@@ -28,14 +32,16 @@ body {
 /*styling for lists/buttons*/
 
 /* Remove default UL styling */
-#savedList {
+#savedList 
+{
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 /* Task row container */
-.task-row {
+.task-row 
+{
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -46,7 +52,8 @@ body {
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     transition: opacity 0.3s ease, transform 0.3s ease, height 0.3s ease, margin 0.3s ease, padding 0.3s ease;
 }
-    .task-row.removing {
+    .task-row.removing 
+    {
         opacity: 0;
         height: 0;
         margin: 0;
@@ -54,12 +61,14 @@ body {
         padding-bottom: 0;
     }
 
-    .task-row:hover {
+    .task-row:hover 
+    {
         transform: translateY(-1px);
     }
 
 /* Editable task field */
-.task-input {
+.task-input 
+{
     flex: 1; /* fill remaining space */
     padding: 6px 8px;
     border: none;
@@ -69,12 +78,14 @@ body {
     outline: none;
 }
 /* Subtle focus effect */
-    .task-input:focus {
+    .task-input:focus 
+    {
         box-shadow: 0 0 0 2px #87382d;
     }
 
 /* Delete button */
-.delete-btn {
+.delete-btn 
+{
     margin-right: 12px;
     padding: 4px 8px;
     border: none;
@@ -85,14 +96,16 @@ body {
     transition: 0.15s ease;
 }
 
-    .delete-btn:hover {
+    .delete-btn:hover 
+    {
         color: #c0392b;
         transform: scale(1.1);
     }
 
  /*Main Input Field*/
 
-.main-input {
+.main-input 
+{
     width: 500px;
     padding: 12px 14px;
     border: none;
@@ -104,14 +117,44 @@ body {
     transition: 0.2s ease;
 }
 
-    .main-input:focus {
+    .main-input:focus 
+    {
         box-shadow: 0 0 0 2px #87382d;
     }
 
 /*Side bar Field*/
 
-.sidebar-image {
+.sidebar-image 
+{
     width: 150px;
     display: block;
     margin: 20px auto;
 }
+
+.sidebar 
+{
+    width: 250px;
+    background-color: #87382d;
+    color: #ef9385;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; /* push bottom content down */
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh; 
+}
+
+.sidebar-link 
+{
+    color: #ef9385;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+    .sidebar-link:hover 
+    {
+        color: #ffccaa;
+        text-decoration: underline;
+    }
