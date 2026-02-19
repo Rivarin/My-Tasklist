@@ -18,9 +18,16 @@ function renderItems() {
         deleteBtn.className = 'delete-btn';
 
         deleteBtn.addEventListener('click', () => {
-            items.splice(index, 1);
-            localStorage.setItem('items', JSON.stringify(items));
-            renderItems();
+
+            // Add removing class
+            row.classList.add('removing');
+
+            // Wait for animation to finish
+            setTimeout(() => {
+                items.splice(index, 1);
+                localStorage.setItem('items', JSON.stringify(items));
+                renderItems();
+            }, 300); // must match CSS transition time
         });
 
         const taskInput = document.createElement('input');
