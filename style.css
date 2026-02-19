@@ -83,11 +83,11 @@ body {
 
 .main-input {
     display: block;
-    width: 250px;
+    width: 500px;
     padding: 10px 14px;
     margin: 20px 0;
     border-radius: 1px;
-    border: solid;
+    border: thin;
     font-size: 15px;
     background-color: #ef9385;
     outline: none;
