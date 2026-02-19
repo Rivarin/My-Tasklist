@@ -10,17 +10,12 @@ function renderItems() {
 
     items.forEach((item, index) => {
 
-        // Create container for each task
         const row = document.createElement('div');
-        row.style.display = 'flex';
-        row.style.alignItems = 'left';
-        row.style.justifyContent = 'left';
-        row.style.margin = '5px 0';
+        row.className = 'task-row';
 
-        // Delete button (on the left)
         const deleteBtn = document.createElement('button');
-        deleteBtn.textContent = 'X';
-        deleteBtn.style.marginRight = '10px';
+        deleteBtn.textContent = '✕';
+        deleteBtn.className = 'delete-btn';
 
         deleteBtn.addEventListener('click', () => {
             items.splice(index, 1);
@@ -28,24 +23,18 @@ function renderItems() {
             renderItems();
         });
 
-        // Editable text field
         const taskInput = document.createElement('input');
         taskInput.type = 'text';
         taskInput.value = item;
-        taskInput.style.width = '200px';
-        taskInput.style.textAlign = 'left';
+        taskInput.className = 'task-input';
 
-        // When user edits the text
-        taskInput.addEventListener('change', () => {
+        taskInput.addEventListener('input', () => {
             items[index] = taskInput.value;
             localStorage.setItem('items', JSON.stringify(items));
         });
 
-        // Add both to the row
         row.appendChild(deleteBtn);
         row.appendChild(taskInput);
-
-        // Add row to list
         savedList.appendChild(row);
     });
 }
