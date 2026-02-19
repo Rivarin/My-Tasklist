@@ -107,3 +107,11 @@ body {
     .main-input:focus {
         box-shadow: 0 0 0 2px #87382d;
     }
+
+/*Side bar Field*/
+
+.sidebar-image {
+    width: 150px;
+    display: block;
+    margin: 20px auto;
+}
