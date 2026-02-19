@@ -25,6 +25,8 @@ body {
     padding: 20px;
 }
 
+/*styling for lists/buttons*/
+
 /* Remove default UL styling */
 #savedList {
     list-style: none;
@@ -36,7 +38,7 @@ body {
 .task-row {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin: 8px 0;
 }
 
@@ -44,7 +46,7 @@ body {
 .task-input {
     width: 220px;
     padding: 8px 12px;
-    border-radius: 8px;
+    border-radius: 0px;
     border: none;
     font-size: 14px;
     background-color: #f4f4f4;
@@ -52,22 +54,19 @@ body {
     transition: 0.2s ease;
 }
 
-
-/*styling for lists/buttons*/
-
 /* Subtle focus effect */
-.task-input:focus {
-    background-color: #ffffff;
-    box-shadow: 0 0 0 2px #ef9385;
-}
+    .task-input:focus {
+        background-color: #ef9385;
+        box-shadow: 0 0 0 2px #ef9385;
+    }
 
 /* Delete button */
 .delete-btn {
     margin-right: 10px;
     padding: 6px 10px;
     border: none;
-    border-radius: 8px;
-    background-color: #ff5c5c;
+    border-radius: 0px;
+    background-color: #ef9385;
     color: white;
     cursor: pointer;
     transition: 0.2s ease;
