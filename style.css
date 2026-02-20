@@ -182,7 +182,7 @@ body
 
 .calendar
 {
-    border: 1px solid #ef9385;
+    border: 1px inset #ef9385;
 }
 
 .calendar-days
