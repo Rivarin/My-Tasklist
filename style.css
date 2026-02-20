@@ -165,3 +165,18 @@ body
     {
         transform: scale(1.1);
     }
+
+/* Left sidebar */
+.sidebar-right
+{
+    width: 250px;
+    background-color: #87382d;
+    color: #ef9385;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; /* push bottom content down */
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh; 
+}
