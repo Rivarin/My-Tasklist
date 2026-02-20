@@ -188,9 +188,11 @@ body
 .calendar-row
 {
     border: 1px solid #ef9385;
+    padding: 10px;
 }
 
 td
 {
     border: 1px solid #ef9385;
+    padding: 10px;
 }
