@@ -185,13 +185,13 @@ body
     border: 1px solid #ef9385;
 }
 
-tr
+.calendar-days
 {
     border: 1px solid #ef9385;
     padding: 5px;
 }
 
-td
+td, tr
 {
     border: 1px solid #ef9385;
     padding: 5px;
