@@ -117,7 +117,7 @@ function generateCalendar() {
             month === today.getMonth() &&
             year === today.getFullYear()
         ) {
-            cell.style.backgroundColor = "#cf7163";
+            cell.style.backgroundColor = "#a1483b";
         }
     }
 
