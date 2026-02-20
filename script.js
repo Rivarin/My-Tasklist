@@ -73,4 +73,56 @@ input.addEventListener('keydown', (event) =>
     }
 });
 
+function generateCalendar() {
+    const calendarBody = document.getElementById("calendar-body");
+    calendarBody.innerHTML = "";
+
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = today.getMonth();
+
+    // First day of the month
+    const firstDay = new Date(year, month, 1);
+
+    // Last day of the month
+    const lastDay = new Date(year, month + 1, 0);
+    const totalDays = lastDay.getDate();
+
+    // Convert Sunday (0) to 6, and shift others back by 1
+    let startDay = firstDay.getDay();
+    startDay = startDay === 0 ? 6 : startDay - 1;
+
+    let row = document.createElement("tr");
+
+    // Empty cells before month starts
+    for (let i = 0; i < startDay; i++) {
+        const emptyCell = document.createElement("td");
+        row.appendChild(emptyCell);
+    }
+
+    // Add actual days
+    for (let day = 1; day <= totalDays; day++) {
+        if ((startDay + day - 1) % 7 === 0) {
+            calendarBody.appendChild(row);
+            row = document.createElement("tr");
+        }
+
+        const cell = document.createElement("td");
+        cell.textContent = day;
+
+        row.appendChild(cell);
+
+        if (
+            day === today.getDate() &&
+            month === today.getMonth() &&
+            year === today.getFullYear()
+        ) {
+            cell.style.backgroundColor = "#cf7163";
+        }
+    }
+
+    calendarBody.appendChild(row);
+}
+
+generateCalendar();
 renderItems();
