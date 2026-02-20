@@ -13,15 +13,6 @@ body
     height: 100vh; 
 }
 
-/* Left sidebar */
-.sidebar 
-{
-    width: 250px;
-    background-color: #87382d;
-    color: #ef9385;
-    font-family: Nunito, sans-serif;
-}
-
 /* Main content area */
 .main 
 {
@@ -131,7 +122,8 @@ body
     margin: 20px auto;
 }
 
-.sidebar 
+/* Left sidebar */
+.sidebar-left
 {
     width: 250px;
     background-color: #87382d;
