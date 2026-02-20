@@ -176,7 +176,7 @@ body
     display: flex;
     flex-direction: column; 
     justify-content: space-between; /* push bottom content down */
-    padding: 250px;
+    padding: 20px;
     box-sizing: border-box;
     height: 100vh; 
 }
